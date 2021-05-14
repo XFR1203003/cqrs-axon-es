@@ -1,5 +1,8 @@
 # Spring Boot Microservices with Spring Security CQRS and Event Sourcing
 
+![image](https://user-images.githubusercontent.com/54174687/118270120-2bc47700-b4dd-11eb-95a3-4d9740e1ae7a.png)
+
+
 Once you start all the modules, make base64 encoding of `springbankClient:springbankSecret` - it will be `c3ByaW5nYmFua0NsaWVudDpzcHJpbmdiYW5rU2VjcmV0`
 
 - Make the request to see if token is generating - 
@@ -79,3 +82,7 @@ Response
     "error_description": "Access is denied"
 }
 ```
+
+If you choose the correct user with required prividedges then it should work - 
+
+
