@@ -53,7 +53,7 @@ curl --location --request PUT 'http://localhost:8081/api/v1/updateUser/f032b3ce-
 ```
 
 
-user collection details
+# user collection details
 
 ```json
 /* 1 */
@@ -162,7 +162,7 @@ db.getCollection('domainevents').find({})
 }
 ```
 
-# Get ALl Users
+# Get Al Users
 
 http://localhost:8082/api/v1/userLookup/
 
