@@ -29,6 +29,26 @@ curl --location --request POST 'http://localhost:8081/api/v1/registerUser' \
 }
 ```
 
+```java
+curl --location --request POST 'http://localhost:8081/api/v1/registerUser' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "user" : {
+        "firstname" : "Jane",
+        "lastmname" : "Doe",
+        "emailAddress" : "jane@springbank.com",
+        "account" : {
+            "username" : "janed",
+            "password" : "P@ssw0rd2",
+            "roles" : [
+                "READ_PRIVILEGE"
+            ]
+        }
+    }
+}'
+```
+
+
 Like Wise Save Jane Doe and Mike Doe.
 
 # Update User
