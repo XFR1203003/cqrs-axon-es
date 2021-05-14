@@ -8,6 +8,51 @@ Download the Axon Framework - https://axoniq.io/download
 
 You can hit the register user, update user and delete user endpoint now.
 
+# Register User
+
+```curl
+curl --location --request POST 'http://localhost:8081/api/v1/registerUser' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "user" : {
+        "firstname" : "John",
+        "lastmname" : "Doe",
+        "emailAddress" : "john@springbank.com",
+        "account" : {
+            "username" : "johnd",
+            "password" : "P@ssw0rd1",
+            "roles" : [
+                "READ_PRIVILEGE", "WRITE_PRIVILEGE"
+            ]
+        }
+    }
+}
+```
+
+Like Wise Save Jane Doe and Mike Doe.
+
+# Update User
+
+```json
+curl --location --request PUT 'http://localhost:8081/api/v1/updateUser/f032b3ce-7d5a-4b74-8ef2-7994433046a8' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "user" : {
+        "firstname" : "Mike",
+        "lastmname" : "Doe",
+        "emailAddress" : "mike.doe@springbank.com",
+        "account" : {
+            "username" : "miked",
+            "password" : "P@ssw0rd2",
+            "roles" : [
+                "READ_PRIVILEGE"
+            ]
+        }
+    }
+}'
+```
+
+
 user collection details
 
 ```json
@@ -45,7 +90,7 @@ user collection details
 
 db.getCollection('domainevents').find({})
 
-```
+```json
 /* 1 */
 {
     "_id" : ObjectId("609e5af038d3f16f7215bf2e"),
